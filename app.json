@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Space Tracker",
+    "slug": "space-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#050A18"
+    },
+    "android": {
+      "adaptiveIcon": { "backgroundColor": "#050A18" },
+      "package": "com.fiap.spacetracker",
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_MEDIA_IMAGES",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "com.fiap.spacetracker",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Usado para capturar imagens de satélites.",
+        "NSLocationWhenInUseUsageDescription": "Usado para exibir sua posição em relação à órbita.",
+        "NSPhotoLibraryUsageDescription": "Acesso à galeria para registros de satélites."
+      }
+    },
+    "plugins": [
+      ["expo-camera", { "cameraPermission": "Permita o acesso à câmera para visualizar satélites." }],
+      ["expo-location", { "locationAlwaysAndWhenInUsePermission": "Permita a localização para rastrear órbitas próximas." }],
+      "expo-media-library",
+      ["expo-notifications", { "color": "#FF2D2D" }]
+    ]
+  }
+}
